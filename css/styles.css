@@ -30,11 +30,6 @@ body {
   padding: 0%;
 }
 
-/* Icons */
-
-.icon-smartphone {
-}
-
 /* Container for header, sections and footer */
 
 .container {
@@ -395,6 +390,31 @@ img {
   border-right: 1px solid var(--cards-border);
   margin: 0 auto;
   padding: 0%;
+}
+
+/* Icons */
+
+.our-clients {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.clients-item {
+  border: solid 1px #afb1b8;
+  border-radius: 4px;
+  padding: 17.71px 32px 14.25px;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+}
+
+.instagram {
 }
 
 /* FOOTER */
