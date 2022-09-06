@@ -10,6 +10,7 @@
   --mainheadline-footer-color: #2f303a;
   --cards-border: #eeeeee;
   --headline-bottom-line: #ececec;
+  --gradient: rgba(47, 48, 58, 0.4);
 }
 
 /* Box-sizing for whole website */
@@ -129,7 +130,8 @@ body {
 
 .main-headline {
   background-color: var(--mainheadline-footer-color);
-  background-image: url(../images/img-background.jpg);
+  background-image: linear-gradient(var(--gradient), var(--gradient)),
+    url(../images/img-background.jpg);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -395,6 +397,11 @@ img {
 
 /* Icons */
 
+.envelope:hover {
+  color: var(--button-backgroundnhover-color);
+}
+
+
 .our-clients {
   list-style: none;
   display: flex;
@@ -418,6 +425,25 @@ img {
 .socials-headline {
   text-transform: uppercase;
 }
+
+.lorem-icon-box {
+  width: 270px;
+  height: 120px;
+  background-color: var(--alternative-button-background-color);
+  padding: 25px 100px;
+}
+
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+padding-bottom: 30px;
+border-radius: 50px;
+background-color: red;
+}
+
 
 /* FOOTER */
 
