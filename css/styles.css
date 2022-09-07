@@ -115,6 +115,7 @@ body {
 
 .contact-header a:hover {
   color: var(--button-backgroundnhover-color);
+  
 }
 .contact-header a:focus {
   color: var(--button-backgroundnhover-color);
@@ -397,9 +398,7 @@ img {
 
 /* Icons */
 
-.envelope:hover {
-  color: var(--button-backgroundnhover-color);
-}
+
 
 
 .our-clients {
@@ -442,6 +441,8 @@ img {
 padding-bottom: 30px;
 border-radius: 50px;
 background-color: red;
+background-position: 50%;
+
 }
 
 
