@@ -140,7 +140,8 @@ body {
   align-items: center;
   margin: 0 auto;
   padding: 0;
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
 }
 
 .main-title {
@@ -490,7 +491,6 @@ img {
 .socials-footer {
   list-style: none;
   display: flex;
- 
 }
 
 .social-link-footer {
