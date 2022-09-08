@@ -11,6 +11,7 @@
   --cards-border: #eeeeee;
   --headline-bottom-line: #ececec;
   --gradient: rgba(47, 48, 58, 0.4);
+  --icons-color: #afb1b8;
 }
 
 /* Box-sizing for whole website */
@@ -120,7 +121,7 @@ body {
   color: var(--button-backgroundnhover-color);
 }
 
-.header-bottom-line {
+.headline-line {
   border-bottom: 1px solid var(--headline-bottom-line);
 }
 
@@ -132,13 +133,14 @@ body {
   background-color: var(--mainheadline-footer-color);
   background-image: linear-gradient(var(--gradient), var(--gradient)),
     url(../images/img-background.jpg);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  width: 100%;
+  width: 1600px;
 }
 
 .main-title {
@@ -179,9 +181,8 @@ body {
   background-color: var(--button-backgroundnhover-color);
   color: var(--button-text-color);
 }
-.main button:focus {
+.main-button:focus {
   background-color: var(--button-backgroundnhover-color);
-
   color: var(--button-text-color);
 }
 
@@ -316,15 +317,13 @@ button {
   padding: 6px 22px;
 }
 
-button:hover {
-  background-color: var(--button-backgroundnhover-color);
-  color: var(--button-text-color);
-}
+button:hover,
 button:focus {
   background-color: var(--button-backgroundnhover-color);
   color: var(--button-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
 .main {
   background-color: white;
 }
@@ -377,10 +376,19 @@ button:focus {
   flex-basis: calc((100% - 60px) / 3);
 }
 
+.card-link {
+  text-decoration: none;
+}
+
 .card-img {
   background-color: var(--button-text-color);
   margin: 0 auto;
   padding: 0%;
+}
+
+.card-img:hover {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 img {
@@ -397,14 +405,49 @@ img {
 
 /* Icons */
 
-.contact-icon:hover,
-.contact-icon:focus {
-  fill: var(--button-backgroundnhover-color);
-}
-
 .smartphone,
 .envelope {
   margin-right: 10px;
+  color: var(--contactncontent-text-color);
+  fill: var(--contactncontent-text-color);
+}
+
+.contact-icon:hover .envelope,
+.contact-icon:focus .envelope,
+.contact-icon:hover .smartphone,
+.contact-icon:focus .smartphone {
+  color: var(--button-backgroundnhover-color);
+  fill: var(--button-backgroundnhover-color);
+}
+
+.lorem-icon-box {
+  width: 270px;
+  height: 120px;
+  background-color: var(--alternative-button-background-color);
+  padding: 25px 100px;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+}
+
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  background-position: 50%;
+  margin-bottom: 30px;
+  color: var(--icons-color);
+  fill: var(--icons-color);
+}
+
+.team-social-link:hover {
+  background-color: var(--button-backgroundnhover-color);
+  fill: var(--button-text-color);
 }
 
 .our-clients {
@@ -417,41 +460,54 @@ img {
 }
 
 .clients-item {
-  border: solid 1px #afb1b8;
+  border: solid 1px var(--icons-color);
   border-radius: 4px;
+  fill: var(--icons-color);
   padding: 17.71px 32px 14.25px;
 }
 
-.socials {
+.clients-link {
+  fill: var(--icons-color);
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--button-backgroundnhover-color);
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  fill: var(--button-backgroundnhover-color);
+  border-color: var(--button-backgroundnhover-color);
+  cursor: pointer;
+}
+
+.footer-flex {
+  display: flex;
+  gap: 70px;
+}
+
+.socials-footer {
   list-style: none;
   display: flex;
+ 
 }
 
-.socials-headline {
-  text-transform: uppercase;
-}
-
-.lorem-icon-box {
-  width: 270px;
-  height: 120px;
-  background-color: var(--alternative-button-background-color);
-  padding: 25px 100px;
-}
-
-.team-social-link {
+.social-link-footer {
   display: flex;
-  align-items: center;
-  justify-content: center;
+
   width: 44px;
   height: 44px;
   border-radius: 50px;
   background-position: 50%;
-  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--button-text-color);
+  fill: var(--button-text-color);
 }
 
-.team-social-link:hover {
+.social-link-footer:hover,
+.social-link-footer:focus {
   background-color: var(--button-backgroundnhover-color);
-  color: var(--button-text-color);
 }
 
 /* FOOTER */
@@ -521,4 +577,12 @@ img {
   letter-spacing: 0.03em;
 
   color: var(--button-text-color);
+}
+
+.socials-headline-footer {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--button-text-color);
+  letter-spacing: 0.03em;
+  line-height: 1em;
 }
