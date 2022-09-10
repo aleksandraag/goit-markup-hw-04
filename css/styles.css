@@ -225,7 +225,6 @@ body {
 .secondary-headline {
   font-weight: 700;
   font-size: 36px;
-  line-height: 2.625em;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
@@ -482,11 +481,6 @@ img {
   border-color: var(--button-backgroundnhover-color);
 }
 
-.footer-flex {
-  display: flex;
-  gap: 70px;
-}
-
 .socials-footer {
   list-style: none;
   display: flex;
@@ -511,22 +505,29 @@ img {
 
 /* FOOTER */
 
-.footer-container {
-  gap: 8px;
+.footer {
   background-color: var(--mainheadline-footer-color);
   padding: 60px 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-address {
+  width: 246px;
+  margin-right: 70px;
 }
 
 .logo-footer {
   font-family: "Raleway", sans-serif;
   text-decoration: none;
-
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.9375em;
   letter-spacing: 0.03em;
-  margin: 0;
   color: var(--button-backgroundnhover-color);
 }
 
@@ -534,54 +535,70 @@ img {
   color: var(--button-text-color);
 }
 
-.contact-footer {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  margin: 0;
-  padding-top: 20px;
+.address {
+  font-style: normal;
+  margin-top: 20px;
+  color: var(--button-text-color);
+  white-space: nowrap;
 }
 
-.contact {
+.contact-list-footer {
   list-style: none;
   display: flex;
   flex-direction: column;
+  align-items: baseline;
   gap: 9px;
-  margin: 0;
+  margin: 9px 0;
   padding: 0;
 }
-.contact-footer a {
+
+.contact-link-footer {
   text-decoration: none;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.5em;
-  letter-spacing: 0.03em;
   color: var(--footer-text-color);
-}
-
-.contact-footer a:hover {
-  color: var(--button-backgroundnhover-color);
-}
-.contact-footer a:focus {
-  color: var(--button-backgroundnhover-color);
-}
-
-.address {
-  font-family: "Roboto";
   font-style: normal;
   font-size: 14px;
   line-height: 1.5em;
-
   letter-spacing: 0.03em;
+}
 
-  color: var(--button-text-color);
+.contact-link-footer:hover,
+.contact-footer:focus {
+  color: var(--button-backgroundnhover-color);
+}
+
+.footer-socials {
+  margin-top: 12px;
 }
 
 .socials-headline-footer {
-  text-transform: uppercase;
   font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
   color: var(--button-text-color);
-  letter-spacing: 0.03em;
-  line-height: 1em;
+  margin-bottom: 20px;
+}
+
+.footer-socials-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+}
+
+.footer-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  fill: var(--button-text-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: var(--button-backgroundnhover-color);
 }
