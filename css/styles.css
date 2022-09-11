@@ -434,6 +434,7 @@ img {
 .socials {
   list-style: none;
   display: flex;
+  gap: 10px;
 }
 
 .team-social-link {
@@ -562,7 +563,7 @@ img {
 }
 
 .contact-link-footer:hover,
-.contact-footer:focus {
+.contact-link-footer:focus {
   color: var(--button-backgroundnhover-color);
 }
 
