@@ -94,9 +94,7 @@ body {
   color: var(--main-text-color);
   margin-left: auto;
 }
-.menu a:hover {
-  color: var(--button-backgroundnhover-color);
-}
+.menu a:hover,
 .menu a:focus {
   color: var(--button-backgroundnhover-color);
 }
